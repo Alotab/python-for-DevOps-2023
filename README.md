@@ -1,3 +1,7 @@
+
+[![Python application test with Github Actions](https://github.com/Alotab/python-for-DevOps-2023/actions/workflows/devops.yml/badge.svg)](https://github.com/Alotab/python-for-DevOps-2023/actions/workflows/devops.yml)
+
+
 # python-for-DevOps-2023
 
 This is a new repositiory for Python for DevOps and deloying of app on AWS Cloud
