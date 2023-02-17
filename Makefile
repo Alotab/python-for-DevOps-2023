@@ -1,5 +1,7 @@
-inatll:
+install:
 	#install commads
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 format:
 	#format code
 lint:
