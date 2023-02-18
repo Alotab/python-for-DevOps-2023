@@ -1,8 +1,7 @@
 install:
 	#install commads
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt &&\
-		pip install textblob.download_corpora
+		pip install -r requirements.txt
 
 format:
 	#format code
