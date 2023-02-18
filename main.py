@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import uvicorn
 from mylib.logic import search_wiki
 
-# from mylib.logic import wiki as wikilogic
+from mylib.logic import wiki as wikilogic
 from mylib.logic import phrase as wikiphrases
 
 
