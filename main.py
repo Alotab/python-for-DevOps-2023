@@ -2,26 +2,37 @@ from fastapi import FastAPI
 import uvicorn
 from mylib.logic import search_wiki
 from mylib.logic import wiki as wikilogic
+from mylib.logic import phrase as wikiphrases
 
 app = FastAPI()
+
 
 @app.get("/")
 async def root():
     return {"message": "Wikipedia API.  Call/Search or /wiki"}
 
 
-@app.get("/search/value}")
+@app.get("/search/{value}")
 async def search(value: str):
     """Page to searcg in wikipedia"""
 
     result = search_wiki(value)
     return {"result": result}
 
-@app.get("/wiki/name}")
-async def wiki(name: str):
-    """Wikipedia"""
 
-    result = search_wiki(name)
+@app.get("/wiki/{name}")
+async def wiki(name: str):
+    """Retrieve Wikipedia page"""
+
+    result = wikilogic(name)
+    return {"result": result}
+
+
+@app.get("/phrase/{name}")
+async def phrase(name: str):
+    """Retrieve Wikipedia page and return phrases"""
+
+    result = wikiphrases(name)
     return {"result": result}
 
 
