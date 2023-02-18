@@ -17,6 +17,13 @@ async def search(value: str):
     result = search_wiki(value)
     return {"result": result}
 
+@app.get("/wiki/name}")
+async def wiki(name: str):
+    """Wikipedia"""
+
+    result = search_wiki(name)
+    return {"result": result}
+
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8000, host="0.0.0.0")
