@@ -5,18 +5,17 @@ from mylib.logic import search_wiki
 from mylib.logic import wiki as wikilogic
 from mylib.logic import phrase as wikiphrases
 
-
 app = FastAPI()
 
 
 @app.get("/")
 async def root():
-    return {"message": "Wikipedia API.  Call/Search or /wiki"}
+    return {"message": "Wikipedia API.  Call/Search or wiki"}
 
 
 @app.get("/search/{value}")
 async def search(value: str):
-    """Page to searcg in wikipedia"""
+    """Page to search in wikipedia"""
 
     result = search_wiki(value)
     return {"result": result}
