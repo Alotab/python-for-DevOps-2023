@@ -4,10 +4,10 @@ install:
 		pip install -r requirements.txt
 
 format:
-	#format code
+	#format code # formating tool
 	black *.py mylib/*.py
 lint:
-	#flake8 or #pylint
+	#flake8 or #pylint. # lining tool
 	pylint --disable=R,C *.py mylib/*.py
 test:
 	#test
